@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Preparo la imagen de la cabecera -->
+        <img class="icono__alura" src="/assets/Group 3.png" alt="Simbolo Alura">
+    </header>
+    <main>
+        <section>
+            <!-- Creo el campo en donde debo ingresar mi palabra en minuscula  -->
+            <input type="text" id="input__text" pattern="[a-z*]">
+            <div>
+                <img src="assets/bi_exclamation-circle-fill.png" alt="circulo de exclamacion">
+                <span>Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div>
+                <!-- creo los botones para utilizar las diferentes funciones de JS -->
+                <button onclick="encriptarTexto()" type="button" id="encriptar__texto">Encriptar</button>
+                <button onclick="desencriptarTexto()" type="button" id="desencriptar__texto">Desencriptar</button>
+            </div>
+        </section>
+        <aside>
+            <section>
+                <img src="assets/Muñeco.png" alt="imagen para nustro campo de resultados">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </section>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>&copy; Desarrollado por Cristhian Guerrero</p>
+    </footer>
+</body>
+<script src="app.js"></script>
+
+</html>
