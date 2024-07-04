@@ -4,75 +4,38 @@ let palabraCopia = "";
 
 function encriptarTexto() {
     let palabra = document.getElementById("input__text").value;
-    let construccionPalabaraEncriptada = '';
-    for (let i = 0; i < palabra.length; i++) {
-        let caracter = palabra.charAt(i);
-
-        switch (caracter) {
-            case 'a':
-                caracter = 'ai';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            case 'e':
-                caracter = 'enter';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            case 'i':
-                caracter = 'imes';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            case 'o':
-                caracter = 'ober';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            case 'u':
-                caracter = 'ufat';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            default:
-                construccionPalabaraEncriptada += caracter;
-                break;
-        }
-        
-    }
-    console.log(construccionPalabaraEncriptada);
-    return construccionPalabaraEncriptada;   
+    let construccionPalabaraEncriptada = palabra
+        .replace(/e/g, "enter")
+        .replace(/i/g, "imes")
+        .replace(/a/g, "ai")
+        .replace(/o/g, "ober")
+        .replace(/u/g, "ufat");
+    mostrarResultado(construccionPalabaraEncriptada);
+    return;
 }
 
 function desencriptarTexto() {
     let palabra = document.getElementById("input__text").value;
-    let construccionPalabaraEncriptada = '';
-    for (let i = 0; i < palabra.length; i++) {
-        let caracter = palabra.charAt(i);
-
-        switch (caracter) {
-            case 'a':
-                caracter = 'ai';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            case 'e':
-                caracter = 'enter';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            case 'i':
-                caracter = 'imes';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            case 'o':
-                caracter = 'ober';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            case 'u':
-                caracter = 'ufat';
-                construccionPalabaraEncriptada += caracter;
-                break;
-            default:
-                construccionPalabaraEncriptada += caracter;
-                break;
-        }
-        
-    }
-    console.log(construccionPalabaraEncriptada);
-    return construccionPalabaraEncriptada;   
+    let construccionPalabaraEncriptada = palabra
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ai/g, "a")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
+    mostrarResultado(construccionPalabaraEncriptada);
+    return;
 }
+
+function mostrarResultado(nuevoTexto) {
+    let elementoHTML = document.getElementById('resultado__texto');
+    elementoHTML.innerHTML = nuevoTexto
+    return elementoHTML;
+}
+
+function copiarTexto() {
+    let elementoHTML = document.getElementById('resultado__texto').value;
+    navigator.clipboard.writeText(elementoHTML);
+}
+
+
 

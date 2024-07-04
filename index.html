@@ -9,36 +9,41 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <!-- Preparo la imagen de la cabecera -->
         <img class="icono__alura" src="/assets/Group 3.png" alt="Simbolo Alura">
     </header>
-    <main>
-        <section>
+    <main id="contenedor">
+        <section id="primera__mitad">
             <!-- Creo el campo en donde debo ingresar mi palabra en minuscula  -->
-            <input type="text" id="input__text" pattern="[a-z*]">
-            <div>
-                <img src="assets/bi_exclamation-circle-fill.png" alt="circulo de exclamacion">
-                <span>Solo letras minúsculas y sin acentos</span>
-            </div>
-            <div>
+            <input id="ingreso__palabra" type="text" pattern="[a-z*]" placeholder="Ingrese el texto aqui">
+            <div id="contenedor__advertencia__y__botones">
                 <!-- creo los botones para utilizar las diferentes funciones de JS -->
-                <button onclick="encriptarTexto()" type="button" id="encriptar__texto">Encriptar</button>
-                <button onclick="desencriptarTexto()" type="button" id="desencriptar__texto">Desencriptar</button>
+                <div id="advertencias__ingreso__valores">
+                    <img src="assets/bi_exclamation-circle-fill.png" alt="circulo de exclamacion">
+                    <span>Solo letras minúsculas y sin acentos</span>
+                </div>
+                <div id="botones__app">
+                    <button id="boton__encriptar" clas="boton" onclick="encriptarTexto()" type="button"
+                        id="encriptar__texto">Encriptar</button>
+                    <button id="boton__desencriptar" clas="boton" onclick="desencriptarTexto()" type="button"
+                        id="desencriptar__texto" disabled>Desencriptar</button>
+                </div>
             </div>
         </section>
-        <aside>
-            <section>
-                <img src="assets/Muñeco.png" alt="imagen para nustro campo de resultados">
-                <h2>Ningún mensaje fue encontrado</h2>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </section>
-        </aside>
+        <section id="segunda__mitad">
+            <!-- Creo el metodo copiar y agrego la imagen sugerida por Alura -->
+            <img src="assets/Muñeco.png" alt="imagen para nustro campo de resultados">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <textarea id="resultado__texto"
+                placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
+            <button clas="boton" onclick="copiarTexto()" type="button" hidden>Copiar</button>
+        </section>
     </main>
-    <footer class="footer">
-        <p>&copy; Desarrollado por Cristhian Guerrero</p>
-    </footer>
 </body>
 <script src="app.js"></script>
+<footer class="footer">
+    <p>&copy; Desarrollado por Cristhian Guerrero</p>
+</footer>
 
 </html>

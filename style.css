@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color--principal: #F3F5FC;
+    --colo--texto--uno: #0A3871;
+    --fuente--del--challenge: "Inter", sans-serif;
+    --color--advertencia: #495057;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#header {
+    margin: 4rem 0 0 4rem;
+    width: 12rem;
+    height: 4.8rem;
+    text-align: center;
+}
+
+
+
+body {
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    background: var(--color--principal);
+}
+
+#contenedor {
+    height: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#primera__mitad {
+    width: 68rem;
+    height: 78.4rem ;
+    margin: 0 24rem;
+    padding-top: 8.8rem;
+    padding-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#ingreso__palabra {
+    width: 57.7rem;
+    height: 4.8rem;
+    background: var(--color--principal);
+    border: none;
+    font-size: 3.2rem;
+    font-weight: 400;
+    font-family: var(--fuente--del--challenge);
+}
+
+#ingreso__palabra::placeholder{
+    color: var(--colo--texto--uno);
+}
+
+#contenedor__advertencia__y__botones {
+    height: 10.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#advertencias__ingreso__valores {
+    display: flex;
+    font-family: var(--fuente--del--challenge);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color--advertencia);
+    align-content: center;
+    gap: 0.5rem;
+}
+
+
+.footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    height: 6rem;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    background: var(--colo--texto--uno);
+    color: var(--color--principal);
+    font-family: var(--fuente--del--challenge);
+}
