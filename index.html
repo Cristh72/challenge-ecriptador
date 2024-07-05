@@ -24,26 +24,26 @@
                     <span>Solo letras minúsculas y sin acentos</span>
                 </div>
                 <div id="botones__app">
-                    <button id="boton__encriptar" clas="boton" onclick="encriptarTexto()" type="button"
+                    <button class="boton" onclick="encriptarTexto()" type="button"
                         id="encriptar__texto">Encriptar</button>
-                    <button id="boton__desencriptar" clas="boton" onclick="desencriptarTexto()" type="button"
-                        id="desencriptar__texto" disabled>Desencriptar</button>
+                    <button class="boton" onclick="desencriptarTexto()" type="button" id="desencriptar__texto"
+                        disabled>Desencriptar</button>
                 </div>
             </div>
         </section>
         <section id="segunda__mitad">
             <!-- Creo el metodo copiar y agrego la imagen sugerida por Alura -->
-            <img src="assets/Muñeco.png" alt="imagen para nustro campo de resultados">
+            <img id="muneco" src="assets/Muñeco.png" alt="imagen para nustro campo de resultados">
             <h2>Ningún mensaje fue encontrado</h2>
             <textarea id="resultado__texto"
                 placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
-            <button clas="boton" onclick="copiarTexto()" type="button" hidden>Copiar</button>
+            <button id="boton__copiar" class="boton" onclick="copiarTexto()" type="button" hidden>Copiar</button>
         </section>
     </main>
+    <footer class="footer">
+        <p id="texto__footer">&copy; Desarrollado por Cristhian Danilo Guerrero Bautista</p>
+    </footer>
 </body>
 <script src="app.js"></script>
-<footer class="footer">
-    <p>&copy; Desarrollado por Cristhian Guerrero</p>
-</footer>
 
 </html>
