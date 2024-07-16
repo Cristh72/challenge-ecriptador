@@ -173,7 +173,7 @@ function cambiaColor() {
             document.documentElement.style.setProperty('--colo--texto--uno', '#0A3871');
             imagenUno = document.querySelector('.icono__alura');
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = 'assets/LogoAzul.png';
+            imagenUno.src = 'assets/LogoBlue.png';
             imagenDos.src = 'assets/Muñeco.png';
             break;
         default:
