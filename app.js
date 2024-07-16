@@ -141,7 +141,7 @@ function cambiaColor() {
             document.documentElement.style.setProperty('--colo--texto--uno', '#FF3B30');
             imagenUno = document.querySelector('.icono__alura');
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = '/assets/LogoRojo.png';
+            imagenUno.src = 'assets/LogoRojo.png';
             imagenDos.src = 'assets/Muñeco--rojo.png';
             break;
         case '2':
@@ -149,7 +149,7 @@ function cambiaColor() {
             document.documentElement.style.setProperty('--colo--texto--uno', '#AF52DE');
             imagenUno = document.querySelector('.icono__alura');
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = '/assets/LogoMorado.png';
+            imagenUno.src = 'assets/LogoMorado.png';
             imagenDos.src = 'assets/Muñeco--morado.png';
             break;
         case '3':
@@ -157,7 +157,7 @@ function cambiaColor() {
             document.documentElement.style.setProperty('--colo--texto--uno', '#000000');
             imagenUno = document.querySelector('.icono__alura');
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = '/assets/LogoNegro.png';
+            imagenUno.src = 'assets/LogoNegro.png';
             imagenDos.src = 'assets/Muñeco--negro.png';
             break;
         case '4':
@@ -165,7 +165,7 @@ function cambiaColor() {
             document.documentElement.style.setProperty('--colo--texto--uno', '#34C759');
             imagenUno = document.querySelector('.icono__alura');
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = '/assets/LogoVerde.png';
+            imagenUno.src = 'assets/LogoVerde.png';
             imagenDos.src = 'assets/Muñeco--verde.png';
             break;
         case '5':
@@ -173,7 +173,7 @@ function cambiaColor() {
             document.documentElement.style.setProperty('--colo--texto--uno', '#0A3871');
             imagenUno = document.querySelector('.icono__alura');
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = '/assets/LogoAzul.png';
+            imagenUno.src = 'assets/LogoAzul.png';
             imagenDos.src = 'assets/Muñeco.png';
             break;
         default:
