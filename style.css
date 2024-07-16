@@ -8,6 +8,20 @@
     --fuente--del--challenge: "Inter", sans-serif;
     --color--advertencia: #495057;
     --color--boton--desencriptar: #D8DFE8;
+    --color--titulo--segunda--mitad: #343A40;
+    /* Colores secundario */
+    --color--texto--rojo : #FF3B30;
+    --color--secundario : #fee2e1;
+    /* Color Terciario */ 
+    --color--texto--verde : #34C759;
+    --color--terciario : #edf8f0;
+    /* Color cuartiario */
+    --color-texto--morado : #AF52DE;
+    --color--cuartiario : #eedcf7;
+    /* Color quinto */
+    --color--texto--negro : #000000;
+    --color--quinto : #d2d2d2;
+
 }
 
 /* Formateo los estilos basicos del Brower */
@@ -19,11 +33,13 @@
 
 /* Configuro el tamaño de fuente en 10px */
 html {
+    height: 90%;
     font-size: 62.5%;
 }
 
 
 #header {
+    position: relative;
     padding: 4rem 0 0 4rem;
     width: 12rem;
     height: 4.8rem;
@@ -36,39 +52,46 @@ html {
 body {
     font-family: "Inter", sans-serif;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: var(--color--principal);
 }
 
 
 /* Inicio a dividir la pantalla con flex */
 #contenedor {
+    width: 100%;
     height: 85%;
     display: flex;
     justify-content: space-evenly;
-    gap: 8rem;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    padding-bottom: 0rem;
 }
 
 /* Inicio a aplicar estilos a la primera mitad de la pagina */
 #primera__mitad {
-    left: 24rem;
-    max-width: 60%;
     max-height: 100%;
+    max-width: 60%;
     padding-top: 8.8rem;
-    padding-bottom: 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 #ingreso__palabra {
-    width: 57.7rem;
-    height: 4.8rem;
+    max-width: 57.7rem;
+    width: 100%;
+    height: 70%;
     background: var(--color--principal);
     border: none;
     font-size: 3.2rem;
     font-weight: 400;
     font-family: var(--fuente--del--challenge);
+    color: var(--colo--texto--uno);
+    resize: none;
+    overflow: hidden;
+    transition: height 0.2s;
+    box-decoration-break: unset;
     outline: none;
 }
 
@@ -76,32 +99,54 @@ body {
     color: var(--colo--texto--uno);
 }
 
-#contenedor__advertencia__y__botones {
+#alerta{
+    color: var(--colo--texto--uno); 
+    display: none;
+    font-size: 1.5rem;
+    background: #d8d8f3b8;
+    width: 30rem;
+    border-radius: 1.1rem;
+    text-align: justify;
+    padding: 0.25rem 0.5rem;
+}
+
+#contenedor__advertencia__y__botones { 
     height: 10.1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 1.6rem;
-
 }
 
 #advertencias__ingreso__valores {
+    position: relative;
     display: flex;
     font-family: var(--fuente--del--challenge);
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--color--advertencia);
-    align-content: center;
     gap: 0.5rem;
     height: 1.8rem;
-    width: 22.9rem;
-    filter: drop-shadow(0 0.4rem 0.4rem #00000025);  
+    width: 100%;
+    filter: drop-shadow(0 0.4rem 0.4rem #00000040);
+    
 }
 
+
 /*aplico estilos a mis botones  */
+#botones__app {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
 .boton {
-    width: 32.8rem;
-    height: 6.7rem;
+    width: 33.2rem;
+    max-width: none;
+    min-width: auto;
+    height: 6.6rem;
     border-radius: 2.4rem;
     background: inherit;
     border: 0.2rem solid var(--colo--texto--uno);
@@ -109,6 +154,20 @@ body {
     font-size: 1.6rem;
     font-family: var(--fuente--del--challenge);
     filter: drop-shadow(0 0.4rem 0.4rem #00000025); 
+}
+
+.boton:hover {
+    filter: drop-shadow(0 0.4rem 0.3rem #0a3871b8);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.boton:active {
+    filter: drop-shadow(0 0.4rem 0.4rem #00000025); 
+}
+
+#boton__copiar {
+    display: none;
 }
 
 /* Especifico colores para mis botones */
@@ -124,35 +183,188 @@ body {
 /* Inicio la configuracion de la segunda mitad de nuestra pagina web */
 
 #segunda__mitad {
-    height: 95%;
-    width: 35rem;
+    height: 100%;
+    width: 40rem;
     border-radius: 3.2rem;
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     font-family: var(--fuente--del--challenge);
+    gap: 2rem;
+    padding-bottom: 5rem;
+    filter: drop-shadow(0 0.4rem 0.4rem #00000089); 
 }
 
 /* Estilos muñeco */
 
+#muneco {
+    width: 30.6rem;
+    height: 28.4rem;
+    padding-bottom: 2rem;
+}
+
+#contenedor__resultado {
+    height: auto;
+    width: 30.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#titulo__muneco {
+    font-family: var(--fuente--del--challenge);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color--titulo--segunda--mitad);
+}
+
+#resultado__texto {
+    font-family: var(--fuente--del--challenge);
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    width: 90%;
+    height: auto;
+    box-decoration-break: unset;
+    color: var(--color--advertencia);
+    resize: none;
+    overflow: hidden;
+    transition: height 0.2s;
+    outline: none;
+}
+
 
 .footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
     bottom: 0;
-    width: 100vw;
-    height: 5%;
-    margin-top: 1rem;
+    width: 100%;
+    max-height: 8rem;
+    min-height: 7rem;
+    height: auto;
+    margin-top: 0.5rem;
     background: var(--colo--texto--uno);
     color: var(--color--principal);
     font-family: var(--fuente--del--challenge);
+    font-size: 0.8rem;
 }
 
 #texto__footer {
-    font-size: 1.6rem;
-    height: 1.6rem;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+}
+
+#colors {
+    border-radius: 1.6rem;
+    height: 2rem;
+    background: #ffffff70;
+}
+
+/*resposive para tablet*/
+
+
+
+@media  (max-width : 769px ){
+
+    #primera__mitad{
+        max-width: 100%;
+        width: 100%;
+        height: 60.7rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #contenedor__advertencia__y__botones{
+        height: 10.1rem;
+    }
+
+    
+
+    #botones__app {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        gap: 0.5rem;
+    }
+
+    .boton {
+        width: 100%;
+        max-width: none;
+        min-width: auto;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 7rem;
+    }
+
+    #segunda__mitad {
+        max-width: 100%;
+        width: 100%;
+        height: auto; 
+    }
+    
+    #contenedor__resultado {
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+
+    #resultado__texto {
+        height: auto;
+    }
+
+    #muneco {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        bottom: 0; 
+    }
+
+    #boton__copiar {
+        width: 95%;
+    }
+}
+
+@media  (max-width : 375px ) {
+    #botones__app{
+        flex-direction: column;
+        gap: 2.4rem;
+        
+    }
+
+    #contenedor {
+        gap: 6.4rem;
+        height: auto;
+        max-height: 100%;
+    }
+
+    
+    #segunda__mitad {
+        max-width: 100%;
+        width: 100%;
+        height: auto; 
+    }
+
+    #contenedor__advertencia__y__botones{
+        height: auto;
+        flex-shrink: 0;
+    }
 
 }

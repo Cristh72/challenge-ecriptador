@@ -11,12 +11,14 @@
 <body>
     <header id="header">
         <!-- Preparo la imagen de la cabecera -->
-        <img class="icono__alura" src="/assets/Group 3.png" alt="Simbolo Alura">
+        <img class="icono__alura" src="/assets/LogoAzul.png" alt="Simbolo Alura">
     </header>
     <main id="contenedor">
         <section id="primera__mitad">
             <!-- Creo el campo en donde debo ingresar mi palabra en minuscula  -->
-            <input id="ingreso__palabra" type="text" pattern="[a-z*]" placeholder="Ingrese el texto aqui">
+            <textarea id="ingreso__palabra" type="text" placeholder="Ingrese el texto aqui"></textarea>
+            <p id="alerta">🫨Solo se permiten letras minúsculas y sin caracteres especiales. Intenta de nuevo. 🫥</p>
+
             <div id="contenedor__advertencia__y__botones">
                 <!-- creo los botones para utilizar las diferentes funciones de JS -->
                 <div id="advertencias__ingreso__valores">
@@ -34,14 +36,25 @@
         <section id="segunda__mitad">
             <!-- Creo el metodo copiar y agrego la imagen sugerida por Alura -->
             <img id="muneco" src="assets/Muñeco.png" alt="imagen para nustro campo de resultados">
-            <h2>Ningún mensaje fue encontrado</h2>
-            <textarea id="resultado__texto"
-                placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
-            <button id="boton__copiar" class="boton" onclick="copiarTexto()" type="button" hidden>Copiar</button>
+            <div id="contenedor__resultado">
+                <h2 id="titulo__muneco">Ningún mensaje fue encontrado</h2>
+                <textarea id="resultado__texto"
+                    placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
+            </div>
+            <button id="boton__copiar" class="boton" onclick="copiarTexto()" type="button">Copiar</button>
         </section>
     </main>
     <footer class="footer">
-        <p id="texto__footer">&copy; Desarrollado por Cristhian Danilo Guerrero Bautista</p>
+        <p id="texto__footer">&copy; <strong>Desarrollado por Cristhian Danilo Guerrero Bautista</strong> <small>en el
+                año <b>2024</b></small></p>
+        <select onclick="cambiaColor()" name="color" id="colors">
+            <option value="">Escogé un color⁣.</option>
+            <option value="1">Rojo</option>
+            <option value="2">Morado</option>
+            <option value="3">Negro</option>
+            <option value="4">Verde</option>
+            <option value="5">Azúl</option>
+        </select>
     </footer>
 </body>
 <script src="app.js"></script>
