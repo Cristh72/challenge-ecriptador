@@ -344,6 +344,11 @@ body {
 }
 
 @media  (max-width : 375px ) {
+
+    #header {
+        padding-left: 0.3rem;
+    }
+    
     #botones__app{
         flex-direction: column;
         gap: 2.4rem;
@@ -352,6 +357,7 @@ body {
 
     #contenedor {
         gap: 6.4rem;
+        min-height: 80rem;
         height: auto;
         max-height: 100%;
     }
