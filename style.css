@@ -305,6 +305,7 @@ body {
     #contenedor {
         flex-direction: column;
         width: 100%;
+        min-height: 60rem;
         height: auto;
         gap: 7rem;
     }
