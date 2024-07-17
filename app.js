@@ -131,56 +131,52 @@ function ajustarAlturaTextarea(textarea) {
     return;
 }
 
+//Debi crear un evento para usar select, dado que no podia llamar la funcion directamente en los dispositivos mobiles
+document.getElementById('colors').addEventListener('change', cambiaColor);
+
 function cambiaColor() {
     let selectHTML = document.getElementById('colors').value;
     let imagenUno = document.querySelector('.icono__alura');
-    let imagenDos
+    let imagenDos;
     switch (selectHTML) {
         case '1':
             document.documentElement.style.setProperty('--color--principal', '#fdd9d7');
             document.documentElement.style.setProperty('--colo--texto--uno', '#FF3B30');
-            imagenUno = document.querySelector('.icono__alura');
+            imagenUno.src = '/assets/LogoRojo.png';
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = 'assets/LogoRojo.png';
             imagenDos.src = 'assets/Muñeco--rojo.png';
             break;
         case '2':
             document.documentElement.style.setProperty('--color--principal', '#eedcf7');
             document.documentElement.style.setProperty('--colo--texto--uno', '#AF52DE');
-            imagenUno = document.querySelector('.icono__alura');
+            imagenUno.src = '/assets/LogoMorado.png';
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = 'assets/LogoMorado.png';
             imagenDos.src = 'assets/Muñeco--morado.png';
             break;
         case '3':
             document.documentElement.style.setProperty('--color--principal', '#d2d2d2');
             document.documentElement.style.setProperty('--colo--texto--uno', '#000000');
-            imagenUno = document.querySelector('.icono__alura');
+            imagenUno.src = '/assets/LogoNegro.png';
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = 'assets/LogoNegro.png';
             imagenDos.src = 'assets/Muñeco--negro.png';
             break;
         case '4':
             document.documentElement.style.setProperty('--color--principal', '#edf8f0');
             document.documentElement.style.setProperty('--colo--texto--uno', '#34C759');
-            imagenUno = document.querySelector('.icono__alura');
+            imagenUno.src = '/assets/LogoVerde.png';
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = 'assets/LogoVerde.png';
             imagenDos.src = 'assets/Muñeco--verde.png';
             break;
         case '5':
             document.documentElement.style.setProperty('--color--principal', '#F3F5FC');
             document.documentElement.style.setProperty('--colo--texto--uno', '#0A3871');
-            imagenUno = document.querySelector('.icono__alura');
+            imagenUno.src = '/assets/LogoAzul.png';
             imagenDos = document.getElementById('muneco');
-            imagenUno.src = 'assets/LogoBlue.png';
             imagenDos.src = 'assets/Muñeco.png';
             break;
         default:
             break;
     }
-
-    console.log(selectHTML.value)
     return;
 }
 

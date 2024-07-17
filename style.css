@@ -273,7 +273,11 @@ body {
 
 
 
-@media  (max-width : 769px ){
+@media  (max-width : 869px ){
+
+    #header {
+        padding-left: 0.3rem;
+    }
 
     #primera__mitad{
         max-width: 100%;
