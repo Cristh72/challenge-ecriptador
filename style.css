@@ -357,9 +357,13 @@ body {
 
     #contenedor {
         gap: 6.4rem;
-        min-height: 80rem;
+        min-height: 100rem;
         height: auto;
         max-height: 100%;
+    }
+
+    #primera__mitad {
+        min-height: 60rem;
     }
 
     
@@ -372,6 +376,14 @@ body {
     #contenedor__advertencia__y__botones{
         height: auto;
         flex-shrink: 0;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        bottom: 0; 
     }
 
 }
