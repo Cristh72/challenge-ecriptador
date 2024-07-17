@@ -338,7 +338,9 @@ body {
         display: flex;
         flex-direction: column;
         width: 100%;
-        position: relative;
+        min-height: 6rem;
+        height: auto;
+        position: sticky;
         bottom: 0; 
     }
 

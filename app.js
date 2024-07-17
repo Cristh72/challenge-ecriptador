@@ -109,9 +109,9 @@ function limpiarCajaResultado() {
 //Busco caracteres especiales o mayusculas por eliminar
 function detectarLetrasMOCE(valorar) {
     let mensajeAlerta = document.getElementById('alerta');
-    let minusculasYCaracteres = /^[a-z?!¡¿.,;:'"-]*$/;
+    let minusculasYCaracteres = /^[a-z\s?!¡¿.,;:'"-]*$/;
     if (!minusculasYCaracteres.test(valorar)) {
-        valorar = valorar.replace(/[^a-z?!¡¿.,;:'"-]/g, '');
+        valorar = valorar.replace(/[^a-z\s?!¡¿.,;:'"-]/g, '');
         mensajeAlerta.style.display = 'block';
         setTimeout(() => {
             mensajeAlerta.style.display = 'none';
