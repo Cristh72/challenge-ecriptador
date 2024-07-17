@@ -142,35 +142,35 @@ function cambiaColor() {
         case '1':
             document.documentElement.style.setProperty('--color--principal', '#fdd9d7');
             document.documentElement.style.setProperty('--colo--texto--uno', '#FF3B30');
-            imagenUno.src = '/assets/LogoRojo.png';
+            imagenUno.src = 'assets/LogoRojo.png';
             imagenDos = document.getElementById('muneco');
             imagenDos.src = 'assets/Muñeco--rojo.png';
             break;
         case '2':
             document.documentElement.style.setProperty('--color--principal', '#eedcf7');
             document.documentElement.style.setProperty('--colo--texto--uno', '#AF52DE');
-            imagenUno.src = '/assets/LogoMorado.png';
+            imagenUno.src = 'assets/LogoMorado.png';
             imagenDos = document.getElementById('muneco');
             imagenDos.src = 'assets/Muñeco--morado.png';
             break;
         case '3':
             document.documentElement.style.setProperty('--color--principal', '#d2d2d2');
             document.documentElement.style.setProperty('--colo--texto--uno', '#000000');
-            imagenUno.src = '/assets/LogoNegro.png';
+            imagenUno.src = 'assets/LogoNegro.png';
             imagenDos = document.getElementById('muneco');
             imagenDos.src = 'assets/Muñeco--negro.png';
             break;
         case '4':
             document.documentElement.style.setProperty('--color--principal', '#edf8f0');
             document.documentElement.style.setProperty('--colo--texto--uno', '#34C759');
-            imagenUno.src = '/assets/LogoVerde.png';
+            imagenUno.src = 'assets/LogoVerde.png';
             imagenDos = document.getElementById('muneco');
             imagenDos.src = 'assets/Muñeco--verde.png';
             break;
         case '5':
             document.documentElement.style.setProperty('--color--principal', '#F3F5FC');
             document.documentElement.style.setProperty('--colo--texto--uno', '#0A3871');
-            imagenUno.src = '/assets/LogoAzul.png';
+            imagenUno.src = 'assets/LogoBlue.png';
             imagenDos = document.getElementById('muneco');
             imagenDos.src = 'assets/Muñeco.png';
             break;
