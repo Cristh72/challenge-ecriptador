@@ -131,8 +131,9 @@ function ajustarAlturaTextarea(textarea) {
     return;
 }
 
-//Debi crear un evento para usar select, dado que no podia llamar la funcion directamente en los dispositivos mobiles
+//Debi crear dos evento para usar select, dado que no podia llamar la funcion directamente en los dispositivos mobiles
 document.getElementById('colors').addEventListener('change', cambiaColor);
+document.getElementById('colors').addEventListener('click', cambiaColor);
 
 function cambiaColor() {
     let selectHTML = document.getElementById('colors').value;
