@@ -115,7 +115,7 @@ function detectarLetrasMOCE(valorar) {
         mensajeAlerta.style.display = 'block';
         setTimeout(() => {
             mensajeAlerta.style.display = 'none';
-        }, 3000)
+        }, 30000)
     } else {
         mensajeAlerta.style.display = 'none';
     }
