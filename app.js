@@ -42,7 +42,7 @@ function desencriptarTexto() {
         document.getElementById('resultado__texto').style.textAlign = 'center';
         desactivarBotonDesencriptar();
         limpiarCaja();
-    }, 30000);
+    }, 300000);
     ;
     return;
 }
@@ -115,7 +115,7 @@ function detectarLetrasMOCE(valorar) {
         mensajeAlerta.style.display = 'block';
         setTimeout(() => {
             mensajeAlerta.style.display = 'none';
-        }, 3000)
+        }, 5000)
     } else {
         mensajeAlerta.style.display = 'none';
     }
